@@ -14,7 +14,7 @@ import { Card } from "../../components/Card";
 
 import { useAuth } from "../../Context/AuthContext";
 
-export function HomePage() {
+export function Home() {
   const { dataDish } = useAuth();
 
   return (
