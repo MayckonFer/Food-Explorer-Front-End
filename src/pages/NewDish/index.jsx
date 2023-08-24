@@ -93,7 +93,6 @@ export function NewDish() {
 
     setTimeout(() => {
       navigate("/home");
-      window.location.reload();
     }, 500);
   }
 
