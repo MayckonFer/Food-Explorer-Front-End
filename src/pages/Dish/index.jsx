@@ -15,7 +15,7 @@ import { FaRegListAlt } from "react-icons/fa";
 
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
+import { Footer } from "../../components/Footer/Index";
 
 import ImgDish from "/assets/images/img1.png";
 
