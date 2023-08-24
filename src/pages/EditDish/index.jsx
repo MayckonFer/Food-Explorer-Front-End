@@ -67,6 +67,7 @@ export function EditDish() {
 
       setTimeout(() => {
         navigate("/home");
+        window.location.reload();
       }, 500);
     }
   }
@@ -111,7 +112,7 @@ export function EditDish() {
 
     setTimeout(() => {
       navigate("/home");
-    }, 500);
+    }, 200);
   }
 
   return (
