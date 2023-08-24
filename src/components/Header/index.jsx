@@ -11,7 +11,7 @@ import logoAdmin from "/assets/images/logo-admin.png";
 
 import { Input } from "../Input";
 import { Button } from "../Button";
-import { Menu } from "./Menu";
+import { Menu } from "../Menu";
 
 import { useContext } from "react";
 import { ContextState } from "../../Context/ContextStates";

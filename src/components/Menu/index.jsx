@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { ContextState } from "../../../Context/ContextStates";
-import { Input } from "../../Input";
+import { ContextState } from "../../Context/ContextStates";
+import { Input } from "../Input";
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { ContainerMenuHeader, HeaderMenu, ContentMenu } from "./styles";
-import { useAuth } from "../../../Context/AuthContext";
-import { useAdminContext } from "../../../Context/IsAdmin";
+import { useAuth } from "../../Context/AuthContext";
+import { useAdminContext } from "../../Context/IsAdmin";
 import { useNavigate } from "react-router-dom";
 
 export function Menu() {
