@@ -21,13 +21,13 @@ Inicie o projeto com os seguintes passos:
 Clone o projeto:
 
 ```bash
-  https://github.com/MayckonFer/front-end-food-explorer.git
+  https://github.com/MayckonFer/Food-Explorer-Front-End.git
 ```
 
 Acesse a pasta do projeto:
 
 ```bash
-  cd front-end-food-explorer
+  cd Food-Explorer-Front-End
 ```
 
 Instale as dependências:
