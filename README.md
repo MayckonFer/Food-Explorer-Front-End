@@ -41,3 +41,11 @@ Inicie o servidor:
 ```bash
   npm run dev
 ```
+
+## Deploy
+
+O front-end está hospedado na vercel
+
+```bash
+  https://food-explorer-front-end-navy.vercel.app/
+```
