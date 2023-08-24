@@ -9,7 +9,7 @@ import {
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer/Index";
-import { Banner } from "../../components/Banner/Index";
+import { Banner } from "../../components/Banner";
 import { Card } from "../../components/Card/Index";
 
 import { useAuth } from "../../Context/AuthContext";
