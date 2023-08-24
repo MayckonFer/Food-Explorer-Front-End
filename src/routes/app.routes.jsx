@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import { IsAdmin } from "../pages/IsAdmin";
-import { Home } from "../pages/Home/Index";
+import { Home } from "../pages/Home";
 import { Dish } from "../pages/Dish";
 import { NewDish } from "../pages/NewDish";
 import { EditDish } from "../pages/EditDish";
