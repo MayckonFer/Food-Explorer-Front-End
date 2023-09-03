@@ -39,7 +39,7 @@ export function Dish() {
     dataDish && dataDish.find((dish) => dish.id === Number(id));
 
   const avatarDish =
-    dataDish && dataDish
+    selectedDish && selectedDish
       ? `${api.defaults.baseURL}/files/${selectedDish.avatar}`
       : ImgDish;
 
@@ -96,18 +96,20 @@ export function Dish() {
               <ContentDish>
                 <img
                   src={avatarDish}
-                  alt={selectedDish && selectedDish.title}
+                  alt={selectedDish ? selectedDish.title : ""}
                 />
 
                 <WrapperInfoDish>
-                  <h2>{selectedDish.title}</h2>
+                  <h2>{selectedDish ? selectedDish.title : ""}</h2>
 
-                  <p>{selectedDish.description}</p>
+                  <p>{selectedDish ? selectedDish.description : ""}</p>
 
                   <WrapperTags>
-                    {selectedDish.tags.map((tag) => (
-                      <span key={String(tag.id)}>{tag.name}</span>
-                    ))}
+                    {selectedDish
+                      ? selectedDish.tags.map((tag) => (
+                          <span key={String(tag.id)}>{tag.name}</span>
+                        ))
+                      : ""}
                   </WrapperTags>
                   <FooterDish>
                     <div>
@@ -120,7 +122,11 @@ export function Dish() {
                       </button>
                     </div>
 
-                    <Button title="incluir ∙ R$ 25,00">
+                    <Button
+                      title={`incluir ∙ R$ ${
+                        selectedDish ? selectedDish.price : ""
+                      }`}
+                    >
                       {width < 992 ? (
                         <FaRegListAlt size={21} color="#fff" />
                       ) : (

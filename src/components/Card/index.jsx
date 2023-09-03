@@ -6,8 +6,6 @@ import { AiFillHeart } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RiSubtractFill } from "react-icons/ri";
 
-import imgCard from "/assets/images/img-card-1.png";
-
 import {
   ContainerCard,
   ContainerCardAdmin,
@@ -18,24 +16,18 @@ import {
   FooterCard,
 } from "./styles";
 
-import imgDish from "/assets/images/prato-vazio.jpg";
-
 import { Button } from "../Button";
 import { MdModeEditOutline } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { api } from "../../services/api";
+
 import { useAdminContext } from "../../Context/IsAdmin";
 
-export function Card({ dish }) {
+export function Card({ idDish, avatar, title, description, price }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const { isAdmin } = useAdminContext();
 
   const navigate = useNavigate();
-
-  const avatar = dish
-    ? `${api.defaults.baseURL}/files/${dish.avatar}`
-    : imgDish;
 
   return (
     <>
@@ -44,23 +36,19 @@ export function Card({ dish }) {
           <header>
             <button
               title="Editar prato"
-              onClick={() => navigate(`/editar-prato/${dish && dish.id}`)}
+              onClick={() => navigate(`/editar-prato/${idDish}`)}
             >
               <MdModeEditOutline size={24} color="#fff" />
             </button>
           </header>
 
-          <img src={dish && avatar} alt={dish && dish.title} />
+          <img src={avatar} alt={title} />
 
-          <h2>{dish.title}</h2>
+          <h2>{title}</h2>
 
-          {window.innerWidth >= 768 ? (
-            <span>{dish && dish.description}</span>
-          ) : (
-            ""
-          )}
+          {window.innerWidth >= 768 ? <span>{description}</span> : ""}
 
-          <p>R$ {dish && dish.price}</p>
+          <p>R$ {price}</p>
         </ContainerCardAdmin>
       ) : (
         <ContainerCard>
@@ -82,16 +70,13 @@ export function Card({ dish }) {
             </button>
           )}
 
-          <img
-            src={avatar !== null ? avatar : imgCard}
-            alt={dish && dish.title}
-          />
+          <img src={avatar} alt={title} />
 
-          <TitleCard>{dish && dish.title}</TitleCard>
+          <TitleCard>{title}</TitleCard>
 
-          <DescriptionCard>{dish && dish.description}</DescriptionCard>
+          <DescriptionCard>{description}</DescriptionCard>
 
-          <PriceCard>R$ {dish && dish.price}</PriceCard>
+          <PriceCard>R$ {price}</PriceCard>
 
           <FooterCard>
             <AmountProduct>
@@ -106,7 +91,7 @@ export function Card({ dish }) {
 
             <Button
               title="incluir"
-              onClick={() => navigate(`/prato/${dish && dish.id}`)}
+              onClick={() => navigate(`/prato/${idDish}`)}
             />
           </FooterCard>
         </ContainerCard>

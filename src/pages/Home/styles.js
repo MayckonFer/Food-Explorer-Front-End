@@ -7,6 +7,13 @@ export const ContainerMain = styled.main`
   margin: 0 auto;
 `;
 
+export const ContainerSnack = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 5rem;
+`;
+
 export const TitleHome = styled.h2`
   font-size: 3.2rem;
   font-weight: 400;
@@ -14,9 +21,13 @@ export const TitleHome = styled.h2`
   color: ${({ theme }) => theme.light_100};
 `;
 
-export const WrapperCards = styled.div`
+export const ContainerCards = styled.div`
   width: 100%;
-  overflow-x: auto;
+`;
+
+export const WrapperCards = styled.div`
+  max-width: 106rem;
+  overflow: auto;
 
   display: flex;
   align-items: center;
@@ -40,11 +51,4 @@ export const WrapperCards = styled.div`
   @media (min-width: 768px) {
     gap: 2.4rem;
   }
-`;
-
-export const ContainerSnack = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-top: 5rem;
 `;

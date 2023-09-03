@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
+  width: 21rem;
   min-width: 21rem;
   height: 29.2rem;
   position: relative;
@@ -25,6 +26,7 @@ export const ContainerCard = styled.div`
   }
 
   @media (min-width: 768px) {
+    width: 30.4rem;
     min-width: 30.4rem;
     height: 46.2rem;
   }
@@ -56,11 +58,6 @@ export const TitleCard = styled.h4`
   color: ${({ theme }) => theme.light_300};
   text-align: center;
   margin-top: 1.2rem;
-
-  &::after {
-    content: ">";
-    padding-left: 0.5rem;
-  }
 
   @media (min-width: 768px) {
     font-size: 2.4rem;
@@ -157,10 +154,12 @@ export const ContainerCardAdmin = styled.div`
 
   padding: 2rem;
 
+  width: 21rem;
   min-width: 21rem;
   height: 29.2rem;
 
   @media (min-width: 768px) {
+    width: 30.4rem;
     min-width: 30.4rem;
     height: 46.2rem;
     gap: 3.2rem;
